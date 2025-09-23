@@ -1,6 +1,6 @@
 import { Bot } from "grammy";
 
-const bot = new Bot(import.meta.env.VITE_TELEGRAM_TOKEN);
+const bot = new Bot(process.env.TELEGRAM_TOKEN!);
 
 // Логика добавления эмодзи
 const addEmojis = (text: string): string => {
