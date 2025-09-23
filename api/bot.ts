@@ -1,4 +1,4 @@
-import { Bot } from "grammy";
+import { Bot, webhookCallback } from "grammy";
 
 const bot = new Bot(process.env.TELEGRAM_TOKEN!);
 
@@ -18,7 +18,7 @@ bot.on("message:text", async (ctx) => {
 // bot.on("inline_query", async (ctx) => {
 // 	const originalText = ctx.inlineQuery.query;
 // 	const emojiText = addEmojis(originalText);
-	
+
 // 	const result = InlineQueryResultBuilder.article("")
 // });
 
@@ -27,5 +27,6 @@ bot.catch((err) => {
 	console.error("Ошибка в боте:", err);
 });
 
-// Для локальной разработки
 bot.start();
+
+export default webhookCallback(bot, "https");
