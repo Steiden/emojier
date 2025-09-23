@@ -3,7 +3,7 @@ import { Bot, InlineQueryResultBuilder } from "grammy";
 const { TELEGRAM_TOKEN: token = "" } = process.env;
 if (!token) throw new Error("Missing TELEGRAM_TOKEN in environment variables");
 
-export const bot = new Bot(token);
+const bot = new Bot(token);
 
 bot.on("inline_query", async (ctx) => {
 	const queryText = ctx.inlineQuery.query || "🌟";
@@ -16,3 +16,5 @@ bot.on("inline_query", async (ctx) => {
 bot.on("message", (ctx) => {
 	ctx.reply("ХААХАХАХАХАХ");
 });
+
+export { bot };
