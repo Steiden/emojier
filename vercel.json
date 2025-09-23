@@ -1,8 +1,4 @@
 {
-	"functions": {
-		"api/bot.ts": {
-			"memory": 1024,
-			"maxDuration": 10
-		}
-	}
+	"framework": "nextjs",
+	"buildCommand": "npx ts-node scripts/build.ts && next build"
 }
