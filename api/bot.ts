@@ -14,6 +14,14 @@ bot.on("message:text", async (ctx) => {
 	await ctx.reply(emojiText);
 });
 
+// // Обработчик inline сообщений
+// bot.on("inline_query", async (ctx) => {
+// 	const originalText = ctx.inlineQuery.query;
+// 	const emojiText = addEmojis(originalText);
+	
+// 	const result = InlineQueryResultBuilder.article("")
+// });
+
 // Обработчик ошибок
 bot.catch((err) => {
 	console.error("Ошибка в боте:", err);
