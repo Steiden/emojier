@@ -1,5 +1,6 @@
-import { Bot, webhookCallback } from "grammy";
+import { Bot } from "grammy";
 
+// Создаём экземпляр бота
 const bot = new Bot(process.env.TELEGRAM_TOKEN as string);
 
 // Логика добавления эмодзи
@@ -19,10 +20,4 @@ bot.catch((err) => {
 	console.error("Ошибка в боте:", err);
 });
 
-// Для локальной разработки
-if (process.env.NODE_ENV === "development") {
-	bot.start();
-	console.log("Бот запущен в режиме polling для dev");
-}
-
-export const POST = await webhookCallback(bot, "next-js");
+bot.start();
