@@ -23,6 +23,7 @@
     "eslint-config-next": "15.5.4",
     "grammy": "^1.38.2",
     "tailwindcss": "^4",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5"
   }
 }

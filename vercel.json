@@ -1,4 +1,4 @@
 {
 	"framework": "nextjs",
-	"buildCommand": "npx ts-node scripts/build.ts && next build"
+	"buildCommand": "ts-node -r tsconfig-paths/register scripts/build.ts && next build"
 }
