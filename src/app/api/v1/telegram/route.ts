@@ -4,14 +4,7 @@ const bot = new Bot(process.env.TELEGRAM_TOKEN as string);
 
 // Логика добавления эмодзи
 const addEmojis = (text: string): string => {
-	const emojis = ["😀", "😂", "🤩", "🚀", "🌟", "🍕", "🎉"];
-	return text
-		.split(" ")
-		.map((word) => {
-			const randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-			return `${word}${randomEmoji}`;
-		})
-		.join(" ");
+	return text + "😀";
 };
 
 // Обработчик текстовых сообщений
