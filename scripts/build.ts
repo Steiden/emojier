@@ -1,4 +1,4 @@
-import { bot } from "../src/bot";
+import { bot } from "@/bot";
 
 const { VERCEL_URL: host, WEBHOOK: webhook = `https://${host}/api/webhook` } = process.env;
 
