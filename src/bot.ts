@@ -1,7 +1,7 @@
 import { Bot, InlineQueryResultBuilder } from "grammy";
 
 const { TELEGRAM_TOKEN: token = "" } = process.env;
-if (!token) throw new Error("Missing BOT_TOKEN in environment variables");
+if (!token) throw new Error("Missing TELEGRAM_TOKEN in environment variables");
 
 export const bot = new Bot(token);
 
