@@ -1,7 +1,6 @@
 import { Bot } from "grammy";
 
-// Создаём экземпляр бота
-const bot = new Bot(process.env.TELEGRAM_TOKEN as string);
+const bot = new Bot(import.meta.env.VITE_TELEGRAM_TOKEN);
 
 // Логика добавления эмодзи
 const addEmojis = (text: string): string => {
@@ -20,4 +19,5 @@ bot.catch((err) => {
 	console.error("Ошибка в боте:", err);
 });
 
+// Для локальной разработки
 bot.start();
