@@ -1,4 +1,0 @@
-{
-	"framework": "nextjs",
-	"buildCommand": "ts-node scripts/build.ts && next build"
-}
