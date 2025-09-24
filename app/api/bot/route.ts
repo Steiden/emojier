@@ -28,7 +28,7 @@ bot.on("inline_query", async (ctx) => {
 	// Формируем результат
 	const results: InlineQueryResult[] = messagesWithEmojis?.map((message, i) => ({
 		type: "article",
-		id: String(i),
+		id: String(Date.now()) + String(i),
 		title: message,
 		input_message_content: {
 			message_text: message,
@@ -36,7 +36,9 @@ bot.on("inline_query", async (ctx) => {
 		},
 	}));
 
-	await ctx.answerInlineQuery(results);
+	await ctx.answerInlineQuery(results, {
+		cache_time: 600,
+	});
 });
 
 bot.on("message", (ctx) => {
